@@ -11,7 +11,7 @@ class Program_Helper:
         self.db = pymysql.connect(
            host='database-2.chntjmvgtb6f.us-west-1.rds.amazonaws.com',
            user='admin',
-           password='Maglev12',
+           password='Maglev123',
            db='',
            port=3306,
            charset='utf8mb4',

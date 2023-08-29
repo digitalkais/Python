@@ -30,7 +30,7 @@ for text_file in glob.glob(destination_path+"*.txt")
 
 
 --------------------------------------------
-
+SDN = taking routing control away from individule  network elements and putting it in hands of centralized control layer. EG. Oorchestration and SDN control system.
 import requests
 import pytest, json
 
