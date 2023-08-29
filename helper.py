@@ -1,6 +1,10 @@
 class Helper:
+<<<<<<< HEAD
 
-    def find_second_largest(self, numbers):
+=======
+    
+>>>>>>> b6ec5cc (modifying)
+    def find_second_largest(numbers):
         """
         This function takes a list of numbers as input and returns the second largest number in the list.
         """
@@ -18,11 +22,11 @@ class Helper:
 
         return second_largest
 
-    def second_largest_enhanced(self, numbers):
+    def second_largest_enhanced(numbers):
         numbers.sort()
         print("2nd largest number using the enhanced method: ", numbers[-2])
 
-    def find_missing_number(self, arr):
+    def find_missing_number(arr):
         n = len(arr) + 1  # Length of the original array including the missing number
         total_sum = (n * (n + 1)) / 2  # Sum of all numbers from 1 to n
         print("Sum of all numbers from 1 to n is: ", total_sum)
@@ -31,17 +35,17 @@ class Helper:
 
         return missing_number
 
-    def remove_duplicates(self, arr1):
+    def remove_duplicates(arr1):
         res = [*set(arr1)]
         print(res)
 
-    def reverse_words(self, st):
+    def reverse_words(st):
         st = st.split()
         st = st[::-1]
         st = ' '.join(st)
         print(st)
 
-    def binary_search(self, arr, target):
+    def binary_search(arr, target):
         #using Devide and Conquer
         # Base case: If the array is empty or target is not present, return -1
         if not arr:
@@ -65,7 +69,7 @@ class Helper:
             else:
                 return -1
 
-    def b_search(self, target, arr):
+    def b_search(self,target, arr):
 
         if arr == []:
             return -1
@@ -75,18 +79,18 @@ class Helper:
             return mid
 
         elif target < arr[mid]: # if target is less then middle, search left side
-            return self.b_search(self, target, arr[:mid])
+            return self.b_search(self,target, arr[:mid])
 
         else:
-            result = self.b_search(self, target, arr[mid +1:])
+            result = self.b_search(self,target, arr[mid +1:])
             return result + mid +1
 
-    def linear_search(self, numbers, target):
+    def linear_search(numbers, target):
         for num in range(len(numbers)):
             if numbers[num] == target:
                 return numbers.index(numbers[num])
 
-    def fibonacci(self, n):
+    def fibonacci(n):
 
         fib = [0,1]
         next_number = list()
@@ -95,7 +99,7 @@ class Helper:
             fib.append(next_number)
         return fib
 
-    def difference_dict(self, dict1, dict2):
+    def difference_dict(dict1, dict2):
 
         differing_keys = []
         for key in dict1:
@@ -105,9 +109,24 @@ class Helper:
         for key in differing_keys:
             print(f"Key: {key}, Dict1 Value: {dict1[key]}, Dict2 Value: {dict2[key]}")
 
-    def is_palindrome(self, word):
+    def is_palindrome(word):
         word = word.lower()
         if word == word[::-1]:
             print(word, " is a palindrome word.")
         else:
             print(word, " is not a palindrome word.")
+
+    def words_starting_with(list, letter):
+        
+        print("The words starting with ", letter, "are: ", )
+        for i in range(len(list)):
+            if list[i][0] == letter.lower() or list[i][0] == letter.upper():
+                print("-", list[i], "-")
+
+    def string_digit_seperator(string):
+        numbers = []
+        numbers = [int(i) for i in string if i.isdigit()]
+        print(numbers)
+
+        non_digits = [i for i in string if i.isalpha()]
+        print("".join(non_digits))
