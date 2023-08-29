@@ -1,9 +1,5 @@
 class Helper:
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> b6ec5cc (modifying)
     def find_second_largest(numbers):
         """
         This function takes a list of numbers as input and returns the second largest number in the list.
